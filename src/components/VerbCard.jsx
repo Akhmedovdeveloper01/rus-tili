@@ -8,7 +8,7 @@ export default function VerbCard({ verb }) {
     const [showTable, setShowTable] = useState(false);
 
     return (
-        <div className="mb-4 w-full max-w-md ">
+        <div className="mb-4 w-full">
             <div className="border p-4 rounded-md">
                 <div className="flex justify-between items-center">
                     <h3 className="text-xl font-bold mb-2 capitalize">
@@ -47,7 +47,7 @@ export default function VerbCard({ verb }) {
                         {["present", "past", "future"].map((type) => (
                             <button
                                 key={type}
-                                className={`px-3 py-1 rounded-md border ${
+                                className={`px-3 py-1 w-4/12 rounded-md border ${
                                     tense === type
                                         ? "bg-primary text-white"
                                         : "bg-white"

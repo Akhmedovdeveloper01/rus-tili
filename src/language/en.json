@@ -12,5 +12,7 @@
     "imperfective": "Imperfective",
     "perfective": "Perfective",
     "imperfective_info": "The verb indicates an ongoing or habitual action.",
-    "perfective_info": "The verb indicates a one-time action with a result."
+    "perfective_info": "The verb indicates a one-time action with a result.",
+    "search": "Search",
+    "not_available": "Not available"
 }

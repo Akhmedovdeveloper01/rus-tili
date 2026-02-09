@@ -12,5 +12,7 @@
     "imperfective": "Davomiy / tugallanmagan harakat",
     "perfective": "Tugallangan / bir martalik harakat",
     "imperfective_info": "Fe’l harakat davom etayotganini yoki odatdagi harakat ekanligini bildiradi.",
-    "perfective_info": "Fe’l bir martalik, natija ko‘rsatadigan harakatni bildiradi."
+    "perfective_info": "Fe’l bir martalik, natija ko‘rsatadigan harakatni bildiradi.",
+    "search": "Qidirish",
+    "not_available": "Mavjud emas"
 }
