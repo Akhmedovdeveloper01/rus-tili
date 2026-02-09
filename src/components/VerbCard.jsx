@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import VerbPronounsTable from "./Pronouns";
 
-
 export default function VerbCard({ verb }) {
     const [tense, setTense] = useState("present");
 
