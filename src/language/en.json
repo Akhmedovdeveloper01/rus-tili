@@ -8,5 +8,9 @@
     "pronouns": "Pronouns",
     "temporary_form": "Temporary form",
     "hidden": "Hidden",
-    "show": "Show"
+    "show": "Show",
+    "imperfective": "Imperfective",
+    "perfective": "Perfective",
+    "imperfective_info": "The verb indicates an ongoing or habitual action.",
+    "perfective_info": "The verb indicates a one-time action with a result."
 }

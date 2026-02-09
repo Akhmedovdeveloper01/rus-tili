@@ -8,5 +8,9 @@
     "pronouns": "Olmoshlar",
     "temporary_form": "Vaqtinchalik shakl",
     "hidden": "Yashirish",
-    "show": "Ko'rish"
+    "show": "Ko'rish",
+    "imperfective": "Davomiy / tugallanmagan harakat",
+    "perfective": "Tugallangan / bir martalik harakat",
+    "imperfective_info": "Fe’l harakat davom etayotganini yoki odatdagi harakat ekanligini bildiradi.",
+    "perfective_info": "Fe’l bir martalik, natija ko‘rsatadigan harakatni bildiradi."
 }

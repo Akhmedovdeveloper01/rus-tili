@@ -9,17 +9,27 @@ import {
 } from "@/components/ui/table";
 import { useTranslation } from "react-i18next";
 
-const pronounsList = [
-    { id: 1, label: "я", type: "singular" },
-    { id: 2, label: "ты", type: "singular" },
-    { id: 3, label: "он/она", type: "singular" },
-    { id: 4, label: "мы", type: "plural" },
-    { id: 5, label: "вы", type: "plural" },
-    { id: 6, label: "они", type: "plural" },
+const standardPronouns = [
+    { id: 1, label: "я", key: "я" },
+    { id: 2, label: "ты", key: "ты" },
+    { id: 3, label: "он/она", key: "он_она" },
+    { id: 4, label: "мы", key: "мы" },
+    { id: 5, label: "вы", key: "вы" },
+    { id: 6, label: "они", key: "они" },
+];
+
+const pastPronouns = [
+    { id: 1, label: "я, ты, он (м.р.)", key: "male" },
+    { id: 2, label: "я, ты, она (ж.р.)", key: "female" },
+    { id: 3, label: "оно (ср.р.)", key: "neutral" },
+    { id: 4, label: "мы, вы, они", key: "plural" },
 ];
 
 export default function VerbPronounsTable({ verb, tense }) {
     const { t } = useTranslation();
+
+    const pronouns = tense === "past" ? pastPronouns : standardPronouns;
+
     return (
         <div className="w-full overflow-x-auto rounded-xl border">
             <Table>
@@ -31,28 +41,13 @@ export default function VerbPronounsTable({ verb, tense }) {
                 </TableHeader>
 
                 <TableBody>
-                    {pronounsList.map((p) => {
-                        let form;
+                    {pronouns.map((p) => {
+                        let form = "-";
+
                         if (tense === "past") {
-                            if (
-                                p.label === "я" ||
-                                p.label === "ты" ||
-                                p.label === "он/она"
-                            ) {
-                                if (p.label === "он/она")
-                                    form =
-                                        verb.forms.past.male +
-                                        " / " +
-                                        verb.forms.past.female;
-                                else if (p.label === "я")
-                                    form = verb.forms.past.male;
-                                else if (p.label === "ты")
-                                    form = verb.forms.past.male;
-                            } else {
-                                form = verb.forms.past.plural;
-                            }
+                            form = verb?.forms?.past?.[p.key] || "-";
                         } else {
-                            form = verb.forms[tense][p.label] || "-";
+                            form = verb?.forms?.[tense]?.[p.key] || "-";
                         }
 
                         return (
