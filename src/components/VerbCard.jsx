@@ -9,6 +9,7 @@ export default function VerbCard({ verb }) {
             <h3 className="text-xl font-bold mb-2">
                 {verb.ru} - {verb.uz}
             </h3>
+            
             <div className="flex gap-2 mb-3">
                 {["present", "past", "future"].map((t) => (
                     <button
