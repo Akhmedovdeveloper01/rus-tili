@@ -38,7 +38,7 @@ export default function VerbCard({ verb }) {
                         </svg>
                     </button>
                 </div>
-                <p>{t(verb.aspect)}</p>
+                {/* <p>{t(verb.aspect)}</p> */}
             </div>
 
             {showTable && (
