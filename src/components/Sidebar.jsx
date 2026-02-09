@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // agar icon yo‘q bo‘lsa aytaman
+import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Sidebar() {
     const [open, setOpen] = useState(false);
-
+    const { t } = useTranslation();
     return (
         <>
             <button
                 onClick={() => setOpen(true)}
-                className="md:hidden fixed top-4 left-4 z-50 "
+                className="md:hidden fixed top-3 left-4 z-50 text-white"
             >
                 <Menu size={28} />
             </button>
@@ -43,7 +44,7 @@ export default function Sidebar() {
                     to="/"
                     onClick={() => setOpen(false)}
                 >
-                    Home
+                    {t("home")}
                 </NavLink>
 
                 <NavLink
@@ -51,7 +52,7 @@ export default function Sidebar() {
                     to="verbs"
                     onClick={() => setOpen(false)}
                 >
-                    Fellar
+                    {t("verbs")}
                 </NavLink>
 
                 <NavLink
@@ -59,7 +60,7 @@ export default function Sidebar() {
                     to="words"
                     onClick={() => setOpen(false)}
                 >
-                    Lug‘at
+                    {t("words")}
                 </NavLink>
             </nav>
         </>

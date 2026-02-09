@@ -1,13 +1,17 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import { Outlet } from "react-router-dom";
+import Header from "@/components/Header";
 
 export default function MainLayout() {
     return (
-        <div className="flex">
+        <div className="flex relative overflow-hidden h-screen">
             <Sidebar />
-            <div className="p-3 w-10/12 ml-14 md:ml-3">
-                <Outlet />
+            <div className="w-full relative">
+                <Header />
+                <div className="p-3 2-full">
+                    <Outlet />
+                </div>
             </div>
         </div>
     );

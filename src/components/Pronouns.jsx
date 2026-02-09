@@ -7,6 +7,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
+import { useTranslation } from "react-i18next";
 
 const pronounsList = [
     { id: 1, label: "я", type: "singular" },
@@ -18,13 +19,14 @@ const pronounsList = [
 ];
 
 export default function VerbPronounsTable({ verb, tense }) {
+    const { t } = useTranslation();
     return (
         <div className="w-full overflow-x-auto rounded-xl border">
             <Table>
                 <TableHeader>
                     <TableRow className="bg-muted">
-                        <TableHead>Местоимения</TableHead>
-                        <TableHead>Временная форма</TableHead>
+                        <TableHead>{t("pronouns")}</TableHead>
+                        <TableHead>{t("temporary_form")}</TableHead>
                     </TableRow>
                 </TableHeader>
 

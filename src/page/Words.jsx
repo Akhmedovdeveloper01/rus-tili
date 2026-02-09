@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Words() {
-  return (
-    <div>Words</div>
-  )
+    const { t } = useTranslation();
+    return (
+        <div>
+            <h2 className="mb-4">{t("words")}</h2>
+        </div>
+    );
 }
