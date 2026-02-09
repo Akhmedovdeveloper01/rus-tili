@@ -9,7 +9,7 @@ export default function MainLayout() {
             <Sidebar />
             <div className="w-full relative">
                 <Header />
-                <div className="p-3 2-full">
+                <div className="p-3">
                     <Outlet />
                 </div>
             </div>
