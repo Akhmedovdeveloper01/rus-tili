@@ -6,5 +6,7 @@
     "past": "Past",
     "future": "Future",
     "pronouns": "Pronouns",
-    "temporary_form": "Temporary form"
+    "temporary_form": "Temporary form",
+    "hidden": "Hidden",
+    "show": "Show"
 }
