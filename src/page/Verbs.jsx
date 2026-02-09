@@ -25,7 +25,7 @@ export default function Verbs() {
     );
     return (
         <div className="h-[92vh] overflow-auto px-4 pt-0 py-6">
-            <div className="pb-5 sticky top-0 z-50 bg-white">
+            <div className="pb-4 sticky top-0 z-40 bg-white">
                 <h2 className=" text-2xl font-bold tracking-tight md:text-3xl">
                     {t("verbs")}
                 </h2>
@@ -38,7 +38,7 @@ export default function Verbs() {
             </div>
 
             <Tabs defaultValue="imperfective" className="w-full">
-                <TabsList className="grid w-full grid-cols-2 mb-6 sticky top-[100px] z-40 bg-white">
+                <TabsList className="grid w-full grid-cols-2 mb-6 sticky top-24 z-40 bg-white">
                     <TabsTrigger value="imperfective">
                         {t("imperfective")} ({filteredImperfective.length})
                     </TabsTrigger>
