@@ -14,5 +14,7 @@
     "imperfective_info": "Fe’l harakat davom etayotganini yoki odatdagi harakat ekanligini bildiradi.",
     "perfective_info": "Fe’l bir martalik, natija ko‘rsatadigan harakatni bildiradi.",
     "search": "Qidirish",
-    "not_available": "Mavjud emas"
+    "not_available": "Mavjud emas",
+    "yes_or_no": "Ha yoki yo'q",
+    "store_situations": "Do'kondagi holatlari"
 }

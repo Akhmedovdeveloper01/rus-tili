@@ -14,5 +14,7 @@
     "imperfective_info": "The verb indicates an ongoing or habitual action.",
     "perfective_info": "The verb indicates a one-time action with a result.",
     "search": "Search",
-    "not_available": "Not available"
+    "not_available": "Not available",
+    "yes_or_no": "Yes or no",
+    "store_situations": "Store situations"
 }
