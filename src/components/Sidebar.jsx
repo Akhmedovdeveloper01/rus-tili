@@ -3,6 +3,25 @@ import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+const navbar = [
+    {
+        path: "/",
+        title: "home",
+    },
+    {
+        path: "verbs",
+        title: "verbs",
+    },
+    {
+        path: "words",
+        title: "words",
+    },
+    {
+        path: "game",
+        title: "game",
+    },
+];
+
 export default function Sidebar() {
     const [open, setOpen] = useState(false);
     const { t } = useTranslation();
@@ -39,29 +58,18 @@ export default function Sidebar() {
                     <X size={28} />
                 </button>
 
-                <NavLink
-                    className="p-3 text-white"
-                    to="/"
-                    onClick={() => setOpen(false)}
-                >
-                    {t("home")}
-                </NavLink>
-
-                <NavLink
-                    className="p-3 text-white"
-                    to="verbs"
-                    onClick={() => setOpen(false)}
-                >
-                    {t("verbs")}
-                </NavLink>
-
-                <NavLink
-                    className="p-3 text-white"
-                    to="words"
-                    onClick={() => setOpen(false)}
-                >
-                    {t("words")}
-                </NavLink>
+                {navbar.map((item) => {
+                    return (
+                        <NavLink
+                            key={item.title}
+                            className="p-3 text-white"
+                            to={item.path}
+                            onClick={() => setOpen(false)}
+                        >
+                            {t(item.title)}
+                        </NavLink>
+                    );
+                })}
             </nav>
         </>
     );

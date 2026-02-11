@@ -16,5 +16,12 @@
     "search": "Qidirish",
     "not_available": "Mavjud emas",
     "yes_or_no": "Ha yoki yo'q",
-    "store_situations": "Do'kondagi holatlari"
+    "store_situations": "Do'kondagi holatlari",
+    "game_title_1": "Karta o'yini",
+    "game_type_info": "Bu o'yin Rus yoki O'zbek tilida savol beradi, tanlov uchun berilgan javoblani birini tanlashingiz kerak bo'ladi.",
+    "game": "O'yin",
+    "card_game_dialog": "Sizga beriladigan savol qaysi tilda ko'rsatilishini tanlashingiz mumkin",
+    "uz": "Uzbek",
+    "ru": "Rus",
+    "back": "Orqaga"
 }

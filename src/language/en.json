@@ -16,5 +16,12 @@
     "search": "Search",
     "not_available": "Not available",
     "yes_or_no": "Yes or no",
-    "store_situations": "Store situations"
+    "store_situations": "Store situations",
+    "game_title_1": "Card game",
+    "game_type_info": "This game asks questions in Russian or Uzbek, and you will need to choose one of the given answers for the challenge.",
+    "game": "Game",
+    "card_game_dialog": "You can choose in which language the question you are asked will be displayed.",
+    "uz": "Uzbek",
+    "ru": "Rus",
+    "back": "Back"
 }
