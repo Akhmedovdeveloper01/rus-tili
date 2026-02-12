@@ -53,6 +53,9 @@ export default function Words() {
                         <SelectItem value="in_store">
                             {t("store_situations")}
                         </SelectItem>
+                        <SelectItem value="words_phrases">
+                            {t("words_phrases")}
+                        </SelectItem>
                     </SelectContent>
                 </Select>
             </div>
