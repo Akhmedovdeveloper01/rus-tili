@@ -10,10 +10,20 @@ import {
 } from "@/components/ui/dialog";
 import { data } from "@/db";
 import { useTranslation } from "react-i18next";
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "../ui/select";
+import { wordCategory } from "./data";
+
 
 export default function CardGame() {
     const { t } = useTranslation();
     const navigation = useNavigate();
+    const [selectedType, setSelectedType] = useState("Yes_or_no");
     const [question, setQuestion] = useState({});
     const [choice, setChoice] = useState([]);
     const [lang, setLang] = useState("ru");
@@ -24,9 +34,13 @@ export default function CardGame() {
     const [selectedCard, setSelectedCard] = useState(null);
     const [wrongCard, setWrongCard] = useState(false);
     const [remaining, setRemaining] = useState(0);
-    function randomWord() {
-        const words = data.words;
+    const [initialData, setInitialData] = useState(data.words);
+    const [selectedCategory, setSelectedCategory] = useState(
+        wordCategory[0]?.value
+    );
 
+    function randomWord() {
+        const words = initialData;
         const availableWords = words.filter(
             (word) => !usedWords.includes(word.id)
         );
@@ -59,7 +73,7 @@ export default function CardGame() {
             setCorAnswer((prev) => prev + 1);
             setUsedWords((prev) => {
                 const newUsed = [...prev, question.id];
-                setRemaining(data.words.length - newUsed.length);
+                setRemaining(initialData.length - newUsed.length);
                 return newUsed;
             });
             setSelectedCard(null);
@@ -82,6 +96,13 @@ export default function CardGame() {
         setCorAnswer(0);
         setNoCorAnswer(0);
     }, []);
+
+    useEffect(() => {
+        if (initialData.length) {
+            randomWord();
+        }
+    }, [initialData]);
+
     return (
         <div>
             <div className="flex flex-col md:flex-row justify-between">
@@ -113,7 +134,7 @@ export default function CardGame() {
                         {choice.length && !isDialogOpen ? (
                             <div className="flex items-center border border-md rounded-md px-3 gap-3">
                                 <p>
-                                    {data.words.length} / {remaining}
+                                    {initialData.length} / {remaining}
                                 </p>
                                 <p className="text-red-600">{noCorAnswer}</p>
                                 <p className="text-green-600">{corAnswer}</p>
@@ -135,7 +156,7 @@ export default function CardGame() {
                     {choice.length && !isDialogOpen ? (
                         <div className="flex items-center border border-md rounded-md px-3 gap-3">
                             <p>
-                                {data.words.length} / {remaining}
+                                {initialData.length} / {remaining}
                             </p>
                             <p className="text-red-600">{noCorAnswer}</p>
                             <p className="text-green-600">{corAnswer}</p>
@@ -151,6 +172,43 @@ export default function CardGame() {
                             <DialogDescription className={"my-5"}>
                                 {t("card_game_dialog")}
                             </DialogDescription>
+                            <div className="grid grid-cols-2 gap-3">
+                                {wordCategory.map((i) => {
+                                    const isActive =
+                                        selectedCategory === i.value;
+
+                                    return (
+                                        <div
+                                            key={i.value}
+                                            onClick={() => {
+                                                setSelectedCategory(i.value);
+
+                                                const filtered =
+                                                    data.words.filter(
+                                                        (item) =>
+                                                            item.type ===
+                                                            i.value
+                                                    );
+
+                                                setInitialData(filtered);
+                                                setUsedWords([]);
+                                                setCorAnswer(0);
+                                                setNoCorAnswer(0);
+                                            }}
+                                            className={`border rounded-md p-3 cursor-pointer transition
+                    ${
+                        isActive
+                            ? "border-green-500 bg-green-50"
+                            : "border-gray-300 hover:border-green-400"
+                    }
+                `}
+                                        >
+                                            <p>{t(i.label)}</p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+
                             <DialogTitle className="flex justify-between gap-3 mt-3">
                                 <Button
                                     className="w-[50%]"

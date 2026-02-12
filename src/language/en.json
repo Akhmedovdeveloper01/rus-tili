@@ -23,5 +23,7 @@
     "card_game_dialog": "You can choose in which language the question you are asked will be displayed.",
     "uz": "Uzbek",
     "ru": "Rus",
-    "back": "Back"
+    "back": "Back",
+    "words_phrases": "Common words and expressions",
+    "all": "All words"
 }

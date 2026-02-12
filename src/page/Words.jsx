@@ -50,7 +50,7 @@ export default function Words() {
                         <SelectItem value="Yes_or_no">
                             {t("yes_or_no")}
                         </SelectItem>
-                        <SelectItem value="Случаи_в_магазине">
+                        <SelectItem value="in_store">
                             {t("store_situations")}
                         </SelectItem>
                     </SelectContent>
