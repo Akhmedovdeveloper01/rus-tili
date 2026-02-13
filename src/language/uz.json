@@ -28,5 +28,11 @@
     "all": "Hamma so'zlar",
     "finish_game": "O‘yin tugadi! Yangi bo‘lim tanlang",
     "game_title_2": "Savol karta",
-    "game_type_info_2": "Bu o'yinda sizga savol beriladi, siz uni topishingiz kerak. Bu yopiq savol bo'ladi, ya'ni variantlar bo'lmaydi."
+    "game_type_info_2": "Bu o'yinda sizga savol beriladi, siz uni topishingiz kerak. Bu yopiq savol bo'ladi, ya'ni variantlar bo'lmaydi.",
+    "view_answer": "Javobni ko'rish",
+    "finish_game_2": "O‘yin tugadi! topolmagan so'zlarinigizni ko'rish uchun, pastagi tugmani bosing",
+    "correct": "Tog'ri",
+    "wrong": "Xato",
+    "restart": "Qayta boshlash",
+    "view_incorrect_answers": "Hato javoblarni ko'rish"
 }

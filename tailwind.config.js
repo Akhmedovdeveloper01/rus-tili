@@ -58,9 +58,14 @@ export default {
                     "50%": { transform: "translateX(5px)" },
                     "75%": { transform: "translateX(-5px)" },
                 },
+                convert: {
+                    "0%": { transform: "rotateY(0deg)" },
+                    "100%": { transform: "rotateY(180deg)" },
+                },
             },
             animation: {
                 shake: "shake 0.5s ease-in-out",
+                convert: "convert 0.6s ease-in-out forwards",
             },
         },
     },

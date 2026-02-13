@@ -23,7 +23,6 @@ export default function CardGame() {
     const [noCorAnswer, setNoCorAnswer] = useState(0);
     const [selectedCard, setSelectedCard] = useState(null);
     const [wrongCard, setWrongCard] = useState(false);
-    const [remaining, setRemaining] = useState(0);
     const [initialData, setInitialData] = useState(data.words);
     const [selectedCategory, setSelectedCategory] = useState([0]?.value);
 
@@ -47,7 +46,6 @@ export default function CardGame() {
             () => 0.5 - Math.random()
         );
 
-        setRemaining(initialData.length);
         setQuestion(correctWord);
         setChoice(allChoices);
     }
@@ -117,9 +115,7 @@ export default function CardGame() {
 
                         {choice.length && !isDialogOpen ? (
                             <div className="flex items-center border border-md rounded-md px-3 gap-3">
-                                <p>
-                                    {initialData.length} / {remaining}
-                                </p>
+                                <p>{initialData.length} |</p>
                                 <p className="text-red-600">{noCorAnswer}</p>
                                 <p className="text-green-600">{corAnswer}</p>
                             </div>

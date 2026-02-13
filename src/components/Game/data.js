@@ -16,3 +16,5 @@ export const wordCategory = [
         label: "words_phrases",
     },
 ];
+
+export const language = ["uz", "ru"];

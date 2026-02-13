@@ -28,5 +28,11 @@
     "all": "All words",
     "finish_game": "Game over! Choose a new section",
     "game_title_2": "Question card",
-    "game_type_info_2": "In this game, you will be asked a question and you have to guess it. It will be a closed question, meaning there will be no options."
+    "game_type_info_2": "In this game, you will be asked a question and you have to guess it. It will be a closed question, meaning there will be no options.",
+    "view_answer": "View answer",
+    "finish_game_2": "The game is over! To see the words you missed, click the button below.",
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "restart": "Restart",
+    "view_incorrect_answers":"View incorrect answers"
 }
