@@ -20,7 +20,7 @@
     "game_title_1": "Karta o'yini",
     "game_type_info_1": "Bu o'yin Rus yoki O'zbek tilida savol beradi, tanlov uchun berilgan javoblani birini tanlashingiz kerak bo'ladi.",
     "game": "O'yin",
-    "card_game_dialog": "Sizga beriladigan savol qaysi tilda ko'rsatilishini tanlashingiz mumkin",
+    "card_game_dialog_1": "Sizga beriladigan savol qaysi tilda ko'rsatilishini va turini tanlashingiz mumkin",
     "uz": "Uzbek",
     "ru": "Rus",
     "back": "Orqaga",
@@ -34,5 +34,6 @@
     "correct": "Tog'ri",
     "wrong": "Xato",
     "restart": "Qayta boshlash",
-    "view_incorrect_answers": "Hato javoblarni ko'rish"
+    "view_incorrect_answers": "Hato javoblarni ko'rish",
+    "card_game_dialog_2": "Sizga beriladigan savolllar turini tanlang"
 }

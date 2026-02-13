@@ -20,7 +20,7 @@
     "game_title_1": "Card game",
     "game_type_info_1": "This game asks questions in Russian or Uzbek, and you will need to choose one of the given answers for the challenge.",
     "game": "Game",
-    "card_game_dialog": "You can choose in which language the question you are asked will be displayed.",
+    "card_game_dialog_1": "You can choose the language and type of question you are asked.",
     "uz": "Uzbek",
     "ru": "Rus",
     "back": "Back",
@@ -34,5 +34,6 @@
     "correct": "Correct",
     "wrong": "Wrong",
     "restart": "Restart",
-    "view_incorrect_answers":"View incorrect answers"
+    "view_incorrect_answers": "View incorrect answers",
+    "card_game_dialog_2": "Choose the type of questions you will be asked."
 }

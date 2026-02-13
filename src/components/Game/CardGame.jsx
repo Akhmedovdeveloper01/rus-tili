@@ -24,7 +24,9 @@ export default function CardGame() {
     const [selectedCard, setSelectedCard] = useState(null);
     const [wrongCard, setWrongCard] = useState(false);
     const [initialData, setInitialData] = useState(data.words);
-    const [selectedCategory, setSelectedCategory] = useState([0]?.value);
+    const [selectedCategory, setSelectedCategory] = useState(
+        wordCategory[0]?.value
+    );
 
     function randomWord() {
         if (!initialData.length) {
@@ -144,11 +146,20 @@ export default function CardGame() {
                     )}
                 </div>
 
-                <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                <Dialog
+                    open={isDialogOpen}
+                    onOpenChange={(open) => {
+                        setIsDialogOpen(open);
+
+                        if (!open) {
+                            navigation(-1);
+                        }
+                    }}
+                >
                     <DialogContent>
                         <DialogHeader>
-                            <DialogDescription className={"my-5"}>
-                                {t("card_game_dialog")}
+                            <DialogDescription className={"my-5 text-center"}>
+                                {t("card_game_dialog_1")}
                             </DialogDescription>
                             {!initialData.length && (
                                 <p className="text-center text-green-600 font-semibold mb-4">
