@@ -15,6 +15,10 @@ export const wordCategory = [
         value: "words_phrases",
         label: "words_phrases",
     },
+    {
+        value: "situations_arguing",
+        label: "situations_arguing",
+    },
 ];
 
 export const language = ["uz", "ru"];

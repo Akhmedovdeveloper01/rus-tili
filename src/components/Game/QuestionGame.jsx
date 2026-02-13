@@ -105,39 +105,45 @@ export default function QuestionGame() {
                             {t("card_game_dialog_2")}
                         </DialogDescription>
 
-                        <div className="grid grid-cols-2 gap-3">
-                            {wordCategory.map((i) => {
-                                const isActive = selectedCategory === i.value;
-                                return (
-                                    <div
-                                        key={i.value}
-                                        onClick={() => {
-                                            setSelectedCategory(i.value);
+                        <DialogTitle>
+                            <div className="grid grid-cols-2 gap-3">
+                                {wordCategory.map((i) => {
+                                    const isActive =
+                                        selectedCategory === i.value;
+                                    return (
+                                        <div
+                                            key={i.value}
+                                            onClick={() => {
+                                                setSelectedCategory(i.value);
 
-                                            const filtered = data.words.filter(
-                                                (item) => item.type === i.value
-                                            );
+                                                const filtered =
+                                                    data.words.filter(
+                                                        (item) =>
+                                                            item.type ===
+                                                            i.value
+                                                    );
 
-                                            if (i.value == "all") {
-                                                setAllData(data.words);
-                                            } else {
-                                                setAllData(filtered);
-                                            }
-                                            setIsDialogOpen(false);
-                                        }}
-                                        className={`border rounded-md p-3 cursor-pointer transition
+                                                if (i.value == "all") {
+                                                    setAllData(data.words);
+                                                } else {
+                                                    setAllData(filtered);
+                                                }
+                                                setIsDialogOpen(false);
+                                            }}
+                                            className={`border rounded-md p-3 cursor-pointer transition
                     ${
                         isActive
                             ? "border-green-500 bg-green-50"
                             : "border-gray-300 hover:border-green-400"
                     }
                 `}
-                                    >
-                                        <p>{t(i.label)}</p>
-                                    </div>
-                                );
-                            })}
-                        </div>
+                                        >
+                                            <p>{t(i.label)}</p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </DialogTitle>
                     </DialogHeader>
                 </DialogContent>
             </Dialog>

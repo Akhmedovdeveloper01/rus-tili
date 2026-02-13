@@ -56,6 +56,9 @@ export default function Words() {
                         <SelectItem value="words_phrases">
                             {t("words_phrases")}
                         </SelectItem>
+                        <SelectItem value="situations_arguing">
+                            {t("situations_arguing")}
+                        </SelectItem>
                     </SelectContent>
                 </Select>
             </div>
