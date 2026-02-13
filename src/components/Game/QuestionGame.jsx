@@ -79,9 +79,17 @@ export default function QuestionGame() {
     return (
         <div className="h-[92vh] overflow-auto">
             {allData.length && !view ? (
-                <Button variant="outline" onClick={() => navigation(-1)}>
-                    {t("back")}
-                </Button>
+                <div className="flex justify-between items-center">
+                    <Button variant="outline" onClick={() => navigation(-1)}>
+                        {t("back")}
+                    </Button>
+
+                    <div className="flex items-center border border-md rounded-md px-3 gap-3">
+                        <p>{allData.length}</p> |
+                        <p className="text-red-600">{notFoundWords.length}</p>
+                        <p className="text-green-600">{foundWords.length}</p>
+                    </div>
+                </div>
             ) : (
                 ""
             )}
