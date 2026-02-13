@@ -5,6 +5,7 @@ import Verbs from "./page/Verbs";
 import Words from "./page/Words";
 import Game from "./page/Game";
 import CardGame from "./components/Game/CardGame";
+import QuestionGame from "./components/Game/QuestionGame";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route path="words" element={<Words />} />
                     <Route path="game" element={<Game />} />
                     <Route path="game/card-game" element={<CardGame />} />
+                    <Route path="game/question" element={<QuestionGame />} />
                 </Route>
             </Routes>
         </div>

@@ -18,13 +18,15 @@
     "yes_or_no": "Ha yoki yo'q",
     "store_situations": "Do'kondagi holatlari",
     "game_title_1": "Karta o'yini",
-    "game_type_info": "Bu o'yin Rus yoki O'zbek tilida savol beradi, tanlov uchun berilgan javoblani birini tanlashingiz kerak bo'ladi.",
+    "game_type_info_1": "Bu o'yin Rus yoki O'zbek tilida savol beradi, tanlov uchun berilgan javoblani birini tanlashingiz kerak bo'ladi.",
     "game": "O'yin",
     "card_game_dialog": "Sizga beriladigan savol qaysi tilda ko'rsatilishini tanlashingiz mumkin",
     "uz": "Uzbek",
     "ru": "Rus",
     "back": "Orqaga",
-    "words_phrases":"Muhim so'z va iboralar",
+    "words_phrases": "Muhim so'z va iboralar",
     "all": "Hamma so'zlar",
-    "finish_game": "O‘yin tugadi! Yangi bo‘lim tanlang"
+    "finish_game": "O‘yin tugadi! Yangi bo‘lim tanlang",
+    "game_title_2": "Savol karta",
+    "game_type_info_2": "Bu o'yinda sizga savol beriladi, siz uni topishingiz kerak. Bu yopiq savol bo'ladi, ya'ni variantlar bo'lmaydi."
 }

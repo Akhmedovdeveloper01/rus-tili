@@ -139,9 +139,7 @@ export default function CardGame() {
                 <div className="hidden md:block">
                     {choice.length && !isDialogOpen ? (
                         <div className="flex items-center border border-md rounded-md px-3 gap-3">
-                            <p>
-                                {initialData.length} / {remaining}
-                            </p>
+                            <p>{initialData.length} |</p>
                             <p className="text-red-600">{noCorAnswer}</p>
                             <p className="text-green-600">{corAnswer}</p>
                         </div>
@@ -182,9 +180,7 @@ export default function CardGame() {
                                                 if (i.value == "all") {
                                                     setInitialData(data.words);
                                                 } else {
-                                                    setInitialData(
-                                                        filtered.slice(0, 5)
-                                                    );
+                                                    setInitialData(filtered);
                                                 }
                                                 setCorAnswer(0);
                                                 setNoCorAnswer(0);

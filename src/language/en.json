@@ -18,7 +18,7 @@
     "yes_or_no": "Yes or no",
     "store_situations": "Store situations",
     "game_title_1": "Card game",
-    "game_type_info": "This game asks questions in Russian or Uzbek, and you will need to choose one of the given answers for the challenge.",
+    "game_type_info_1": "This game asks questions in Russian or Uzbek, and you will need to choose one of the given answers for the challenge.",
     "game": "Game",
     "card_game_dialog": "You can choose in which language the question you are asked will be displayed.",
     "uz": "Uzbek",
@@ -26,5 +26,7 @@
     "back": "Back",
     "words_phrases": "Common words and expressions",
     "all": "All words",
-    "finish_game": "Game over! Choose a new section"
+    "finish_game": "Game over! Choose a new section",
+    "game_title_2": "Question card",
+    "game_type_info_2": "In this game, you will be asked a question and you have to guess it. It will be a closed question, meaning there will be no options."
 }
