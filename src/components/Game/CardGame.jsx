@@ -10,50 +10,35 @@ import {
 } from "@/components/ui/dialog";
 import { data } from "@/db";
 import { useTranslation } from "react-i18next";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "../ui/select";
 import { wordCategory } from "./data";
-
 
 export default function CardGame() {
     const { t } = useTranslation();
     const navigation = useNavigate();
-    const [selectedType, setSelectedType] = useState("Yes_or_no");
     const [question, setQuestion] = useState({});
     const [choice, setChoice] = useState([]);
     const [lang, setLang] = useState("ru");
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [corAnswer, setCorAnswer] = useState(0);
     const [noCorAnswer, setNoCorAnswer] = useState(0);
-    const [usedWords, setUsedWords] = useState([]);
     const [selectedCard, setSelectedCard] = useState(null);
     const [wrongCard, setWrongCard] = useState(false);
     const [remaining, setRemaining] = useState(0);
     const [initialData, setInitialData] = useState(data.words);
-    const [selectedCategory, setSelectedCategory] = useState(
-        wordCategory[0]?.value
-    );
+    const [selectedCategory, setSelectedCategory] = useState([0]?.value);
 
     function randomWord() {
-        const words = initialData;
-        const availableWords = words.filter(
-            (word) => !usedWords.includes(word.id)
-        );
-
-        if (availableWords.length === 0) {
-            alert("O‘yin tugadi! 🎉");
+        if (!initialData.length) {
+            setIsDialogOpen(true);
+            setQuestion({});
+            setChoice([]);
             return;
         }
 
-        const randomIndex = Math.floor(Math.random() * availableWords.length);
-        const correctWord = availableWords[randomIndex];
+        const randomIndex = Math.floor(Math.random() * initialData.length);
+        const correctWord = initialData[randomIndex];
 
-        const wrongAnswers = words
+        const wrongAnswers = data.words
             .filter((word) => word.id !== correctWord.id)
             .sort(() => 0.5 - Math.random())
             .slice(0, 3);
@@ -61,31 +46,31 @@ export default function CardGame() {
         const allChoices = [...wrongAnswers, correctWord].sort(
             () => 0.5 - Math.random()
         );
-        setRemaining(availableWords.length);
+
+        setRemaining(initialData.length);
         setQuestion(correctWord);
         setChoice(allChoices);
-        setIsDialogOpen(true);
     }
 
     function checkAnswer(id) {
         setSelectedCard(id);
+
         if (id === question?.id) {
             setCorAnswer((prev) => prev + 1);
-            setUsedWords((prev) => {
-                const newUsed = [...prev, question.id];
-                setRemaining(initialData.length - newUsed.length);
-                return newUsed;
-            });
+
+            setInitialData((prev) =>
+                prev.filter((item) => item.id !== question.id)
+            );
+
             setSelectedCard(null);
-            randomWord();
             setIsDialogOpen(false);
         } else {
             setWrongCard(true);
+
             setTimeout(() => {
-                setNoCorAnswer((prev) => prev - 1);
+                setNoCorAnswer((prev) => prev + 1);
                 setWrongCard(false);
                 setSelectedCard(null);
-                randomWord();
                 setIsDialogOpen(false);
             }, 1500);
         }
@@ -95,12 +80,11 @@ export default function CardGame() {
         randomWord();
         setCorAnswer(0);
         setNoCorAnswer(0);
+        setIsDialogOpen(true);
     }, []);
 
     useEffect(() => {
-        if (initialData.length) {
-            randomWord();
-        }
+        randomWord();
     }, [initialData]);
 
     return (
@@ -125,7 +109,7 @@ export default function CardGame() {
                                 variant="outline"
                                 onClick={() => navigation(-1)}
                             >
-                                Back
+                                {t("back")}
                             </Button>
                         ) : (
                             ""
@@ -172,11 +156,16 @@ export default function CardGame() {
                             <DialogDescription className={"my-5"}>
                                 {t("card_game_dialog")}
                             </DialogDescription>
+                            {!initialData.length && (
+                                <p className="text-center text-green-600 font-semibold mb-4">
+                                    🎉 {t("finish_game")}
+                                </p>
+                            )}
+
                             <div className="grid grid-cols-2 gap-3">
                                 {wordCategory.map((i) => {
                                     const isActive =
                                         selectedCategory === i.value;
-
                                     return (
                                         <div
                                             key={i.value}
@@ -190,8 +179,13 @@ export default function CardGame() {
                                                             i.value
                                                     );
 
-                                                setInitialData(filtered);
-                                                setUsedWords([]);
+                                                if (i.value == "all") {
+                                                    setInitialData(data.words);
+                                                } else {
+                                                    setInitialData(
+                                                        filtered.slice(0, 5)
+                                                    );
+                                                }
                                                 setCorAnswer(0);
                                                 setNoCorAnswer(0);
                                             }}
