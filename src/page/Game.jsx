@@ -22,7 +22,12 @@ export default function Game() {
                         </div>
                         <p>{t(item.game_type_info)}</p>
 
-                        <NavLink to={item.to} className={"absolute bottom-0 left-0 right-0 mx-auto"}>
+                        <NavLink
+                            to={item.to}
+                            className={
+                                "absolute bottom-0 left-0 right-0 mx-auto"
+                            }
+                        >
                             <Button
                                 className={"w-full mt-3 "}
                                 variant={"outline"}

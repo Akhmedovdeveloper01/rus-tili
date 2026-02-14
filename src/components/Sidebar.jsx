@@ -1,24 +1,35 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import {
+    HomeIcon,
+    Menu,
+    X,
+    WholeWord,
+    GamepadDirectional,
+    Table2,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const navbar = [
     {
         path: "/",
         title: "home",
+        icon: <HomeIcon className="mr-2" size={22} />,
     },
     {
         path: "verbs",
         title: "verbs",
+        icon: <Table2 className="mr-2" size={22} />,
     },
     {
         path: "words",
         title: "words",
+        icon: <WholeWord className="mr-2" size={22} />,
     },
     {
         path: "game",
         title: "game",
+        icon: <GamepadDirectional className="mr-2" size={22} />,
     },
 ];
 
@@ -62,10 +73,11 @@ export default function Sidebar() {
                     return (
                         <NavLink
                             key={item.title}
-                            className="p-3 text-white"
+                            className="p-3 text-white flex gap-3 items-center"
                             to={item.path}
                             onClick={() => setOpen(false)}
                         >
+                            {item.icon}
                             {t(item.title)}
                         </NavLink>
                     );
