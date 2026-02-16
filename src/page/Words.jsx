@@ -13,7 +13,7 @@ import { data } from "@/db";
 export default function Words() {
     const { t } = useTranslation();
     const [searchTerm, setSearchTerm] = useState("");
-    const [selectedType, setSelectedType] = useState("Yes_or_no");
+    const [selectedType, setSelectedType] = useState("yes_or_no");
 
     const filteredWords = data?.words?.filter((item) => {
         const matchSearch =
@@ -47,7 +47,7 @@ export default function Words() {
                         <SelectValue placeholder="Type" />
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectItem value="Yes_or_no">
+                        <SelectItem value="yes_or_no">
                             {t("yes_or_no")}
                         </SelectItem>
                         <SelectItem value="in_store">
@@ -58,6 +58,9 @@ export default function Words() {
                         </SelectItem>
                         <SelectItem value="situations_arguing">
                             {t("situations_arguing")}
+                        </SelectItem>
+                        <SelectItem value="cafe_and_restaurant">
+                            {t("cafe_and_restaurant")}
                         </SelectItem>
                     </SelectContent>
                 </Select>

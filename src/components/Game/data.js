@@ -4,7 +4,7 @@ export const wordCategory = [
         label: "all",
     },
     {
-        value: "Yes_or_no",
+        value: "yes_or_no",
         label: "yes_or_no",
     },
     {
@@ -18,6 +18,10 @@ export const wordCategory = [
     {
         value: "situations_arguing",
         label: "situations_arguing",
+    },
+    {
+        value: "cafe_and_restaurant",
+        label: "cafe_and_restaurant",
     },
 ];
 
