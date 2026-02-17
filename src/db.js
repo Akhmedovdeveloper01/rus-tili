@@ -2056,3 +2056,196 @@ export const data = {
         },
     ],
 };
+
+export const lessons = [
+    {
+        id: 1,
+        title: "У меня есть (Menda bor)",
+        level: "beginner",
+        description:
+            "Rus tilida egalikni ifodalash: 'Menda bor' konstruktsiyasi",
+
+        explanation: {
+            rule: "Rus tilida 'menda bor' deyilganda 'У меня есть' ishlatiladi.",
+            structure: "У + kim? + есть + nima?",
+            example_formula: "У меня есть телефон",
+        },
+
+        pronouns: [
+            { ru: "У меня", uz: "Menda" },
+            { ru: "У тебя", uz: "Senda" },
+            { ru: "У него", uz: "Unda (erkak)" },
+            { ru: "У неё", uz: "Unda (ayol)" },
+            { ru: "У нас", uz: "Bizda" },
+            { ru: "У вас", uz: "Sizda" },
+            { ru: "У них", uz: "Ularda" },
+        ],
+
+        examples: [
+            {
+                ru: "У меня есть телефон",
+                uz: "Menda telefon bor",
+            },
+            {
+                ru: "У него есть деньги",
+                uz: "Unda pul bor",
+            },
+            {
+                ru: "У нас есть работа",
+                uz: "Bizda ish bor",
+            },
+        ],
+
+        exercises: [
+            {
+                id: 1,
+                type: "choose",
+                question: "Menda telefon bor",
+                options: [
+                    "Меня есть телефон",
+                    "У меня есть телефон",
+                    "Я есть телефон",
+                ],
+                correctAnswer: 1,
+            },
+            {
+                id: 2,
+                type: "reorder",
+                question: "To‘g‘ri tartibga keltiring",
+                words: ["телефон", "есть", "У меня"],
+                correctAnswer: "У меня есть телефон",
+            },
+            {
+                id: 3,
+                type: "write",
+                question: "Rus tiliga tarjima qiling: Unda pul bor",
+                correctAnswer: "У него есть деньги",
+            },
+        ],
+    },
+
+    {
+        id: 2,
+        title: "Есть / Был / Будет",
+        level: "beginner",
+        description: "Bor edi / Bor / Bo‘ladi zamonlari",
+
+        explanation: {
+            rule: "Есть - hozirgi zamon, Был/Была/Было - o'tgan zamon, Будет - kelasi zamon",
+        },
+
+        pronouns: [
+            { ru: "У меня", uz: "Menda" },
+            { ru: "У тебя", uz: "Senda" },
+            { ru: "У него", uz: "Unda (erkak)" },
+            { ru: "У неё", uz: "Unda (ayol)" },
+            { ru: "У нас", uz: "Bizda" },
+            { ru: "У вас", uz: "Sizda" },
+            { ru: "У них", uz: "Ularda" },
+        ],
+
+        examples: [
+            {
+                ru: "У меня есть работа",
+                uz: "Menda ish bor",
+            },
+            {
+                ru: "У меня была машина",
+                uz: "Menda mashina bor edi",
+            },
+            {
+                ru: "У меня будет время",
+                uz: "Menda vaqt bo‘ladi",
+            },
+        ],
+
+        exercises: [
+            {
+                id: 1,
+                type: "choose",
+                question: "Menda vaqt bo‘ladi",
+                options: [
+                    "У меня есть время",
+                    "У меня будет время",
+                    "У меня был время",
+                ],
+                correctAnswer: 1,
+            },
+        ],
+    },
+];
+
+export const adjectivesAgreement = {
+    id: 11,
+    title: "Sifatlarning ot bilan moslashuvi",
+    description:
+        "Rus tilida sifatlar otning jinsiga va soniga qarab o‘zgaradi.",
+    explanation: `
+    Rus tilida sifatlar (прилагательные) ot bilan moslashadi.
+    Ular jins (мужской, женский, средний род) va songa qarab o‘zgaradi.
+  
+    Мужской род: -ый / -ий
+    Женский род: -ая
+    Средний род: -ое / -ее
+    Ko‘plik: -ые / -ие
+    `,
+    examples: [
+        {
+            adjective: "лёгкий",
+            forms: [
+                "лёгкий чемодан",
+                "лёгкая сумка",
+                "лёгкое задание",
+                "лёгкие упражнения",
+            ],
+        },
+        {
+            adjective: "вкусный",
+            forms: [
+                "вкусный обед",
+                "вкусная котлета",
+                "вкусное мороженое",
+                "вкусные конфеты",
+            ],
+        },
+    ],
+    exercises: [
+        {
+            id: 1,
+            type: "fill",
+            question: "_____ сумка (лёгкий)",
+            correctAnswer: "лёгкая",
+        },
+        {
+            id: 2,
+            type: "fill",
+            question: "_____ мороженое (вкусный)",
+            correctAnswer: "вкусное",
+        },
+        {
+            id: 3,
+            type: "fill",
+            question: "_____ фильм (интересный)",
+            correctAnswer: "интересный",
+        },
+        {
+            id: 4,
+            type: "fill",
+            question: "_____ дети (маленький)",
+            correctAnswer: "маленькие",
+        },
+        {
+            id: 5,
+            type: "fill",
+            question: "_____ книга (интересный)",
+            correctAnswer: "интересная",
+        },
+        {
+            id: 6,
+            type: "multiple",
+            question: "_____ пальто (синий)",
+            options: ["синий", "синяя", "синее", "синие"],
+            correctAnswer: "синее",
+        },
+    ],
+};

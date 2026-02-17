@@ -7,6 +7,8 @@ import {
     WholeWord,
     GamepadDirectional,
     Table2,
+    NotebookTabs,
+    PencilLine,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -30,6 +32,16 @@ const navbar = [
         path: "game",
         title: "game",
         icon: <GamepadDirectional className="mr-2" size={22} />,
+    },
+    {
+        path: "practice",
+        title: "practice",
+        icon: <NotebookTabs className="mr-2" size={22} />,
+    },
+    {
+        path: "grammar",
+        title: "grammar",
+        icon: <PencilLine className="mr-2" size={22} />,
     },
 ];
 

@@ -37,5 +37,11 @@
     "view_incorrect_answers": "View incorrect answers",
     "card_game_dialog_2": "Choose the type of questions you will be asked.",
     "situations_arguing": "Situations when arguing",
-    "cafe_and_restaurant": "Situation in the cafe and restaurant"
+    "cafe_and_restaurant": "Situation in the cafe and restaurant",
+    "practice": "Practice",
+    "grammar": "Grammar",
+    "start": "Start",
+    "exercises": "Exercises",
+    "result": "Result",
+    "next": "Next"
 }
