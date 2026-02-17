@@ -97,7 +97,7 @@ export default function Grammar() {
                     </CardContent>
                 </Card>
                 <div className="space-y-6">
-                    <h2 className="text-2xl font-semibold">{t("exircise")}</h2>
+                    <h2 className="text-2xl font-semibold">{t("exercises")}</h2>
 
                     {adjectivesAgreement.examples.map((item, i) => (
                         <Card key={i} className="overflow-hidden">
