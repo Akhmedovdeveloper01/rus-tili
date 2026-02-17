@@ -48,7 +48,7 @@ export function GrammarExercises({ exercises }) {
     );
 
     return (
-        <div className="h-[92vh] overflow-auto">
+        <div className="h-[90vh] overflow-auto">
             <div className="space-y-10">
                 <div className="flex items-center gap-3">
                     <Button variant="outline" onClick={() => navigation(-1)}>{t("back")}</Button>
@@ -201,7 +201,7 @@ export function GrammarExercises({ exercises }) {
                     );
                 })}
 
-                <div className="flex flex-col items-center justify-between gap-6 border-t pt-8 sm:flex-row">
+                <div className="flex flex-col items-center justify-between gap-3 border-t pt-4 sm:flex-row">
                     {showResults ? (
                         <div className="text-xl font-semibold">
                             Натижа: {results.correct} / {results.total} —{" "}
